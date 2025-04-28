@@ -1,0 +1,26 @@
+[
+  {
+    "id": 101,
+    "nombre": "Auriculares Bluetooth",
+    "desc": "Auriculares inalámbricos con cancelación de ruido",
+    "precio": 15999.99,
+    "imagen": "auriculares.jpg",
+    "disponible": true
+  },
+  {
+    "id": 102,
+    "nombre": "Teclado Mecánico RGB",
+    "desc": "Teclado con retroiluminación personalizable",
+    "precio": 23999,
+    "imagen": "teclado.jpg",
+    "disponible": true
+  },
+  {
+    "id": 103,
+    "nombre": "Monitor 24'' FHD",
+    "desc": "Monitor LED Full HD 1920x1080",
+    "precio": 42999.5,
+    "imagen": "monitor.jpg",
+    "disponible": false
+  }
+]
