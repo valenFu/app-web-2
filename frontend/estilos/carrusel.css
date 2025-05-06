@@ -1,0 +1,71 @@
+/* Contenedor del carrusel */
+.carrusel-container {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.carrusel {
+    display: flex;
+    transition: transform 0.5s ease;
+    flex-wrap: nowrap;
+}
+
+
+.producto {
+    flex: 0 0 25%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin: 0 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+.producto img {
+    width: 100%;        /* Asegura que la imagen ocupe todo el espacio disponible */
+    height: auto;       /* Mantiene la proporción de la imagen */
+    object-fit: contain; /* Evita que la imagen se corte */
+    max-height: 300px; 
+    
+}
+
+.producto h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.producto p {
+    font-size: 14px;
+    color: #666;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .producto {
+        flex: 0 0 50%; /* Muestra 2 productos */
+    }
+}
+
+@media (max-width: 480px) {
+    .producto {
+        flex: 0 0 100%; /* Muestra 1 producto */
+    }
+}

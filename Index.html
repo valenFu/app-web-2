@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../frontend/sesion/Resgitro.css">
+</head>
+<body>
+<div class="container">
+    <h1>
+        <a href="../index.html">
+            <img src="../imagenes/lumiere.webp" alt="lumiere" style="width:150px;height:150px;">
+        </a>
+    </h1>
+    <h2>Crear Cuenta</h2>
+    <form id="registroForm" class="registro-form">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="txtNombre" name="nombre" placeholder="Ingrese su nombre" required>
+
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="txtApellido" name="apellido" placeholder="Ingrese su apellido" required>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="txtEmail" name="email" placeholder="Ingrese su email" required> 
+
+        <label for="password">Contraseña:</label>
+        <input type="password" id="txtContraseña" name="contraseña" placeholder="Ingrese su contraseña" required>
+
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="txtFechaNacimiento" name="fechaNacimiento" required>
+
+        <button type="submit" id="btnEnviar">Registrarse</button>
+    </form>
+</div>
+<script src="sesion/registro.js"></script>
+</body>
+</html>

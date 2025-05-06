@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+body {
+    font-family: "Fredoka", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
+    background-color: rgb(255 250 244); 
+}
+
+/* Contenedor que agrupa la imagen y el formulario */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+}
+
+
+.container img {
+    margin-bottom: 0px; /* Espacio entre la imagen y el formulario */
+}
+
+/* Para centrar el formulario de registro */
+.registro-form {
+    background-color: bisque; 
+    color: rgb(99, 10, 41); 
+    text-align: center; 
+    border: 5px solid rgb(99, 10, 41); 
+    border-radius: 20px; 
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.registro-form input[type="text"],
+.registro-form input[type="email"],
+.registro-form input[type="password"],
+.registro-form input[type="date"] {
+    width: 100%; /* El input se ajusta al 100% del contenedor */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc; 
+    border-radius: 5px; /* Bordes redondeados para los inputs */
+}
+
+.registro-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(99, 10, 41); 
+    color: white; 
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;
+}
+
+.registro-form button:hover {
+    background-color: #7a0e27;
+}

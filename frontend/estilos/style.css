@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+@import 'navBar.css';
+@import 'item.css';
+@import 'ropaint.css';
+@import 'carrusel.css';
+
+body {
+    background-color: rgb(250 227 195);
+}
+
+/* Botones de sesión (iniciar y registrar) */
+.sesion {
+    background-color: bisque;
+    color: rgb(99, 10, 41);
+    border: 2px solid rgb(99, 10, 41);
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-family: "Fredoka", sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: ease-in-out 0.5s;
+}
+
+.sesion:hover {
+    background-color: rgb(218, 163, 97);
+    color: white;
+}
+
+/* Botón de cerrar sesión */
+.cerrarSesion {
+    background-color: bisque;
+    color: rgb(99, 10, 41);
+    border: 2px solid #630a29;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-family: "Fredoka", sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: ease-in-out 0.5s;
+}
+
+.cerrarSesion:hover {
+    background-color: rgb(218, 163, 97);
+    color: white;
+}
+
+/* Contenedor flexible para hacer que sea responsive */
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.imagen {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav {
+    font-family: "Fredoka", sans-serif;
+    margin-top: 50px;
+}
+
+/* Título de explicación */
+.explicacion {
+    font-size: 1.5em; /* Ajuste de tamaño */
+    font-family: "Fredoka", sans-serif;
+    color: rgb(99, 10, 41);
+    text-align: center;
+}
+
+/* Contenedor de texto explicativo */
+.contenedorExplicacion, .text {
+    font-family: "Fredoka", sans-serif;
+    background-color: bisque;
+    color: rgb(99, 10, 41);
+    text-align: center;
+    border: 5px solid rgb(99, 10, 41);
+    border-radius: 20px;
+}
+
+.eliminar {
+    margin-top: 10px;
+}
+
+/* Estilo para los contenedores principales */
+.contenedorItem, .contenedorCarrito {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 20px;
+    align-items: flex-start;
+}
+
+/* Estilo para cada tarjeta de producto */
+.item {
+    flex: 1 1 200px;
+    box-sizing: border-box;
+    border: 4px solid rgb(99, 10, 41);
+    padding: 10px;
+    text-align: center;
+    max-width: 300px;
+    background-color: bisque;
+}
+
+/* Imagen en la tarjeta */
+.item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilo para el título */
+.item h3 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+/* Estilo para el precio */
+.item p {
+    margin: 10px 0;
+    font-size: 1em;
+    color: #333;
+    font-family: "Fredoka", sans-serif;
+}
+
+/* Botones en las tarjetas */
+.item button {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: "Fredoka", sans-serif;
+}
+
+.item button.eliminar {
+    background-color: red;
+}
+.precioTotal{
+    font-family: "Fredoka", sans-serif;
+    font-size: 0.5cm;
+    font-weight: bold;
+}
+
+.totalCartel {
+    background-color: #f4f4f4; /* Fondo suave */
+    border: 2px solid #ccc; /* Borde gris claro */
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.totalCartel p {
+    margin: 0;
+    color: #333;
+}
+
+.totalCartel strong {
+    color: #e74c3c; /* Color rojo para resaltar el total */
+}
+
+

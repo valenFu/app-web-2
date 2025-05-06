@@ -1,0 +1,94 @@
+{
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Pijama corto de acetato",
+        "categoria": "Ropa",
+        "descripcion": "Pijama corto color rojo.",
+        "precio": 15.99,
+        "imagen": "pijamaAcetato (1).webp",
+        "stock": 50
+      },
+      {
+        "id": 2,
+        "nombre": "Trio de morley",
+        "categoria": "Ropa",
+        "descripcion": "Combo de pijama tanto para dias frios como calurosos.",
+        "precio": 25.99,
+        "imagen": "pijamaAcetato (2).webp",
+        "stock": 30
+      },
+      {
+        "id": 3,
+        "nombre": "Pijama Curvy",
+        "categoria": "Ropa",
+        "descripcion": "Pijama de algodon.",
+        "precio": 45.00,
+        "imagen": "pijamaCurvy.webp",
+        "stock": 20
+      },
+      {
+        "id": 4,
+        "nombre": "Pijama modal",
+        "categoria": "Ropa",
+        "descripcion": "Pijama modal con pantalon largo.",
+        "precio": 29.99,
+        "imagen": "PijamaModal (1).webp",
+        "stock": 40
+      },
+      {
+        "id": 5,
+        "nombre": "Pijama modal",
+        "categoria": "Ropa",
+        "descripcion": "Pijama kids con bolsa animada.",
+        "precio": 70.00,
+        "imagen": "PijamaModal (2).webp",
+        "stock": 10
+      },
+      {
+        "id": 6,
+        "nombre": "Pantuflas de river",
+        "categoria": "Calzado",
+        "descripcion": "Pantuflas de river para el mas fanatico.",
+        "precio": 70.00,
+        "imagen": "Pantuflas de river.webp",
+        "stock": 15
+      },
+      {
+        "id": 7,
+        "nombre": "Pantuflas rosas de conejo",
+        "categoria": "Calzado",
+        "descripcion": "Pantuflas rosas para niñas con diseño de conejos.",
+        "precio": 70.00,
+        "imagen": "pantuflas rosas de conejo.webp",
+        "stock": 6
+      },
+      {
+        "id": 8,
+        "nombre": "Pantuflas acolchadas",
+        "categoria": "Calzado",
+        "descripcion": "pantuflas acolchadas para los inviernos mas frios.",
+        "precio": 70.00,
+        "imagen": "pantuflas acolchadas.webp",
+        "stock": 18
+      },
+      {
+        "id": 11,
+        "nombre": "Colcha de Marie",
+        "categoria": "Hogar",
+        "descripcion": "Colcha de niños con diseño de Marie para 1 plaza.",
+        "precio": 30.00,
+        "imagen": "Colcha de Marie.webp",
+        "stock": 6
+      },
+      {
+        "id": 12,
+        "nombre": "Colcha de Stich",
+        "categoria": "Hogar",
+        "descripcion": "Colcha de niños con diseño de Stich para 1 plaza.",
+        "precio": 20.00,
+        "imagen": "Colcha de Stich.webp",
+        "stock": 14
+      }
+    ]
+}

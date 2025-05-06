@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lumiére basics</title> <!-- Nombre de la tienda -->
+    <link rel="stylesheet" href="../estilos/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <button class="sesion" id="logoutButton">Cerrar sesión</button>
+        <div class="imagen">
+            <h1><a href="../Index.html"><img src="../imagenes/lumiere.webp" alt="lumiere" style="width:150px;height:150px;"></a></h1>
+        </div>
+    </header>
+
+    <div class="explicacion">
+        <h1>¿Quiénes somos?</h1>
+        <div class="contenedorExplicacion">
+            <p>
+                Somos una pequeña empresa dedicada a vender una gran variedad de productos que van desde ropa interior hasta
+                artículos de blanquería.
+            </p>
+        </div>
+    </div>
+
+    <!-- Barra de navegación -->
+    <nav class="navegacion">
+        <ul>                   
+        </ul>
+    </nav> 
+    <br>
+    <section class="carrusel-container">
+        <h2>Productos destacados</h2>
+        <div class="carrusel">
+            <!-- Los productos se cargarán aquí dinámicamente -->
+        </div>
+        <br>
+        <button class="prev" onclick="moverCarrusel(-1)">❮</button>
+        <button class="next" onclick="moverCarrusel(1)">❯</button>
+    </section>
+
+    <br>
+    <!-- Contenido principal -->
+    <section class="text">
+        <p>Encuentra todo lo que necesitas en nuestras categorías: ropa interior, ropa, calzado y hogar.</p>
+    </section>
+
+   
+
+    <script src="../script/Main.js"></script>
+    <script src="../sesion/logout.js"></script>
+    <script src="../script/Carrusel.js"></script>
+</body>
+</html>

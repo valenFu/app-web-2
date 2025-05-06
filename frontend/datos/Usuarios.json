@@ -1,0 +1,20 @@
+{
+    "productos": [
+      {
+        "id": 1,
+        "nombre": "Valentin",
+        "Apellido": "Funes",
+        "email": "valentinfunes4@gmail.cmom.",
+        "FechaNacimiento": "27/7/2004",
+        "Contraseña": "user1"
+      },
+      {
+        "id": 2,
+        "nombre": "Juan",
+        "Apellido": "Perez",
+        "email": "juanperez@gmail.com",
+        "FechaNacimiento":"2/10/2019",
+        "Contraseña": "user2"
+      }
+    ]
+}

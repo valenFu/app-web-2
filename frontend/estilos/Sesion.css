@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+body {
+    font-family: "Fredoka", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-color: rgb(255 250 244); 
+}
+
+/* Contenedor que agrupa la imagen y el formulario */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilo para la imagen del logo */
+.imagen img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+}
+
+/* Para centrar el formulario */
+.login-form {
+    background-color: bisque;
+    color: rgb(99, 10, 41); 
+    text-align: center;
+    border: 5px solid rgb(99, 10, 41); /* Borde */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px; /* Ajusta el ancho del formulario */
+}
+
+.login-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%; /* El input se ajusta al 100% del contenedor */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc; /* Color del borde de los inputs */
+    border-radius: 5px; /* Bordes redondeados para los inputs */
+}
+
+/* Centrar el botón de enviar */
+.login-form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(99, 10, 41); 
+    color: white;
+    border: none;
+    border-radius: 5px; 
+    cursor: pointer;   
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: #7a0e27;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../estilos/Sesion.css">
+</head>
+<body>
+    <div class="container">
+        <div class="imagen">
+            <a href="../index.html"><img src="../imagenes/Athenia.webp" alt="Athenia" style="width:150px;height:150px;"></a>
+        </div>
+        <form action="" method="post" class="login-form">
+            <div>
+                <label for="txtNombre"><b>Nombre</b>:</label>
+                <br>
+                <input type="text" id="txtNombre" name="txtNombre" placeholder="Ingrese su nombre" required/>
+                <br>
+                <label for="txtApellido"><b>Apellido</b>:</label>
+                <br>
+                <input type="text" id="txtApellido" name="txtApellido" placeholder="Ingrese su Apellido" required/>
+            </div>
+            <div>
+                <label for="txtEmail"><b>Email</b>:</label>
+                <br>
+                <input type="email" name="txtEmail" id="txtEmail" placeholder="Ingrese su email" required/>
+                <br>
+            </div>
+            <div>
+                <label for="txtContraseña"><b>Contraseña</b></label>
+                <br>
+                <input type="password" name="txtContraseña" id="txtContraseña" placeholder="Ingrese su contraseña" required/>
+            </div>
+            <div>
+                <br>
+                <input type="submit" value="Confirmar">
+            <div>
+     
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
