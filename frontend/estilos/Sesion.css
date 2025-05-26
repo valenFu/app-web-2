@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    background-color: rgb(255 250 244); 
+    background-color: rgb(250 227 195); 
 }
 
 /* Contenedor que agrupa la imagen y el formulario */
@@ -26,7 +26,7 @@ body {
 
 /* Para centrar el formulario */
 .login-form {
-    background-color: bisque;
+    background-color: rgb(238, 220, 198);
     color: rgb(99, 10, 41); 
     text-align: center;
     border: 5px solid rgb(99, 10, 41); /* Borde */
