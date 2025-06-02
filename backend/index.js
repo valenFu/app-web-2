@@ -1,39 +1,42 @@
-// backend/index.js
-const express = require('express');
-const cors = require('cors');
-const productosRoutes = require('./productos');  // Requiere productos.js directamente
-const fs = require('fs');
-const path = require('path');
+import 'dotenv/config';
+import express from 'express';
+import cors from 'cors';
+import productosRoutes from './productos.js';
+import { connectToDatabase } from '../db/conexion.js';
+import authRoutes from './routes/auth.js';
+
 const app = express();
-const PORT = 3000;
+
+const PORT = process.env.PORT;
 
 app.use(cors());
-app.use(express.json()); // Para leer JSON en POST
+app.use(express.json());
 
-// Usa las rutas de productos
+app.use('/auth', authRoutes);
 app.use('/productos', productosRoutes);
 
-// Ruta para recibir orden de compra
-app.post('/orden', (req, res) => {
-    const orden = req.body;
-    const filePath = path.join(__dirname, 'ordenes.json');
+// Conectar a MongoDB antes de iniciar el servidor
+connectToDatabase()
+  .then(() => {
+    console.log('Conectado a MongoDB');
 
-    // Leer órdenes anteriores
-    let ordenes = [];
-    if (fs.existsSync(filePath)) {
-        ordenes = JSON.parse(fs.readFileSync(filePath));
-    }
-
-    ordenes.push(orden);
-    fs.writeFileSync(filePath, JSON.stringify(ordenes, null, 2));
-
-    res.status(201).json({ mensaje: 'Orden recibida con éxito.' });
+    app.listen(PORT, () => {
+      console.log(`Servidor corriendo en el puerto ${PORT}`);
+    });
+  })
+  .catch((error) => {
+    console.error('Error conectando a MongoDB:', error);
+    process.exit(1);
+  });
+console.log("MONGODB_URI:", process.env.MONGODB_URI);
+// Ruta para recibir orden y guardarla en MongoDB
+app.post('/orden', async (req, res) => {
+  try {
+    const nuevaOrden = new Orden(req.body);
+    await nuevaOrden.save();
+    res.status(201).json({ mensaje: 'Orden guardada en MongoDB con éxito.' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ mensaje: 'Error guardando la orden.' });
+  }
 });
-
-// Hacer pública la carpeta 'datos'
-app.use('/datos', express.static(path.join(__dirname, 'datos')));
-
-app.listen(3000, () => {
-  console.log('Servidor corriendo en http://localhost:3000');
-});
-
