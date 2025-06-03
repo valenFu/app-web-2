@@ -1,22 +1,36 @@
-import { Router } from 'express';
+import Venta from '../../db/schemas/ventas.schema';
 
-const router= Router()
+router.post('/create', verificarToken, async (req, res) => {
+  const { productos, total } = req.body;
+  try {
+    
+    const venta = new Venta({ productos, total, usuarioId: req.usuario.id });
+    await venta.save();
 
-router.get('/all',(req,res)=>{
-    try{
-        res.status(200).json()
-    }catch(error){
-        res.status(400).json()
-    }
-})
+    res.status(201).json({ mensaje: 'Compra registrada', venta });
+  } catch (error) {
+    res.status(400).json({ mensaje: 'Error al registrar compra', error });
+  }
+});
 
-router.post('/create',(req,res)=>{
-    const {} = req.body
-    try{
-        res.status(200).json()
-    }catch(error){
-        res.status(400).json()
-    }
-})
+router.post('/comprar', verificarToken, async (req, res) => {
+  const { productos, total } = req.body;
 
-export default router
+  if (!productos || !total) {
+    return res.status(400).json({ mensaje: 'Faltan datos de la compra' });
+  }
+
+  try {
+    const nuevaVenta = new Venta({
+      productos,
+      total,
+      usuarioId: req.usuario.id
+    });
+
+    await nuevaVenta.save();
+
+    res.status(201).json({ mensaje: 'Compra registrada con éxito', venta: nuevaVenta });
+  } catch (error) {
+    res.status(500).json({ mensaje: 'Error al guardar la venta', error });
+  }
+});

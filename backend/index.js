@@ -4,6 +4,7 @@ import cors from 'cors';
 import productosRoutes from './productos.js';
 import { connectToDatabase } from '../db/conexion.js';
 import authRoutes from './routes/auth.js';
+import { verificarToken } from './middlewares/authMiddleware.js';
 
 const app = express();
 
@@ -30,7 +31,7 @@ connectToDatabase()
   });
 console.log("MONGODB_URI:", process.env.MONGODB_URI);
 // Ruta para recibir orden y guardarla en MongoDB
-app.post('/orden', async (req, res) => {
+app.post('/orden', verificarToken, async (req, res) => {
   try {
     const nuevaOrden = new Orden(req.body);
     await nuevaOrden.save();
