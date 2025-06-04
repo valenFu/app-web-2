@@ -1,0 +1,56 @@
+[
+  {
+    "nombre": "Invitado",
+    "email": "sin-email@ejemplo.com",
+    "carrito": [
+      {
+        "id": 2,
+        "nombre": "Trio de morley",
+        "categoria": "Ropa",
+        "descripcion": "Combo de pijama tanto para dias frios como calurosos.",
+        "precio": 25.99,
+        "imagen": "pijamaAcetato (2).webp",
+        "stock": 30,
+        "cantidad": 1
+      },
+      {
+        "id": 6,
+        "nombre": "Pantuflas de river",
+        "categoria": "Calzado",
+        "descripcion": "Pantuflas de river para el mas fanatico.",
+        "precio": 70,
+        "imagen": "Pantuflas de river.webp",
+        "stock": 15,
+        "cantidad": 1
+      }
+    ],
+    "total": 95.99
+  },
+  {
+    "nombre": "Invitado",
+    "email": "sin-email@ejemplo.com",
+    "carrito": [
+      {
+        "id": 2,
+        "nombre": "Trio de morley",
+        "categoria": "Ropa",
+        "descripcion": "Combo de pijama tanto para dias frios como calurosos.",
+        "precio": 25.99,
+        "imagen": "pijamaAcetato (2).webp",
+        "stock": 30,
+        "cantidad": 1
+      },
+      {
+        "id": 6,
+        "nombre": "Pantuflas de river",
+        "categoria": "Calzado",
+        "descripcion": "Pantuflas de river para el mas fanatico.",
+        "precio": 70,
+        "imagen": "Pantuflas de river.webp",
+        "stock": 15,
+        "cantidad": 1
+      }
+    ],
+    "total": 95.99
+  }
+]
