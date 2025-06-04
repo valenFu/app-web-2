@@ -1,5 +1,4 @@
-{
-    "productos": [
+ [
       {
         "id": 1,
         "nombre": "Pijama corto de acetato",
@@ -91,4 +90,3 @@
         "stock": 14
       }
     ]
-}

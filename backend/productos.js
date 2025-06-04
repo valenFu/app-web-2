@@ -1,23 +1,28 @@
-import fs from 'fs';
-import path from 'path';
 import express from 'express';
+import Producto from '../db/schemas/productos.schema.js';
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-  const filePath = path.join(path.resolve(), 'datos', 'productos.json');
+// Obtener todos los productos
+router.get('/', async (req, res) => {
+  try {
+    const productos = await Producto.find();
+    res.json(productos);
+  } catch (error) {
+    res.status(500).json({ mensaje: 'Error al obtener productos', error });
+  }
+});
 
-  if (fs.existsSync(filePath)) {
-    fs.readFile(filePath, 'utf8', (err, data) => {
-      if (err) {
-        return res.status(500).json({ mensaje: 'Error al leer el archivo' });
-      }
-      const productos = JSON.parse(data);
-      res.json(productos);
-    });
-  } else {
-    res.status(404).json({ mensaje: 'Archivo de productos no encontrado' });
+// Obtener productos por categoría (opcional)
+router.get('/categoria/:categoria', async (req, res) => {
+  try {
+    const categoria = req.params.categoria;
+    const productos = await Producto.find({ categoria });
+    res.json(productos);
+  } catch (error) {
+    res.status(500).json({ mensaje: 'Error al obtener productos por categoría', error });
   }
 });
 
 export default router;
+

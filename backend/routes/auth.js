@@ -3,7 +3,7 @@ import Usuario from '../../db/schemas/usuario.schemas.js';
 import jwt from 'jsonwebtoken';
 
 const router = express.Router();
-const SECRET_KEY = process.env.JWT_SECRET || 'clave_secreta_para_jwt';
+const SECRET_KEY = process.env.JWT_SECRET || '9A877196C2AD465A241AC8D849549';
 
 // Ruta para registrar usuario
 router.post('/register', async (req, res) => {
