@@ -1,27 +1,25 @@
-import mongoose from 'mongoose';
-import 'dotenv/config';
+import { connectToDatabase } from '../db/conexion.js'; 
+import Producto from '../db/schemas/productos.schema.js';
 import fs from 'fs';
-import path from 'path';
-import Producto from '../db/schemas/productos.schemas.js';
+const productos = JSON.parse(fs.readFileSync('../frontend/datos/Productos.json', 'utf-8'));
 
-// Ruta relativa desde backend/importarProductos.js hacia frontend/datos/productos.json
-const rutaJSON = path.join('..', 'frontend', 'datos', 'productos.json');
+// Esta función importa los productos del archivo JSON a MongoDB
+async function importarProductos() {
+  try {
+    await connectToDatabase();
 
-mongoose.connect(process.env.MONGODB_URI)
-  .then(async () => {
-    console.log('Conectado a MongoDB');
+    // Opcional: eliminar productos anteriores
+    await Producto.deleteMany();
 
-    const data = fs.readFileSync(rutaJSON, 'utf-8');
-    const productos = JSON.parse(data);
-
-    await Producto.deleteMany(); // Limpia colección si ya tenía datos
+    // Insertar productos desde el JSON
     await Producto.insertMany(productos);
 
     console.log('Productos importados con éxito');
-    process.exit(0);
-  })
-  .catch((err) => {
-    console.error('Error al importar productos:', err);
+    process.exit(); // Finaliza el proceso
+  } catch (error) {
+    console.error('Error al importar productos:', error);
     process.exit(1);
-  });
+  }
+}
 
+importarProductos();

@@ -30,15 +30,24 @@ router.get('/byCategory/:Category',(req,res)=>{
     }
 })
 
-router.post('/create', async (req,res)=>{
-    const{name, desc, stock, price } = req.body
-    try{
-        const result = await createProd(name, desc, stock, price)
-        console.log(result)
-        res.status(200).json(result)
-    }catch(error){
-        res.status(400).json()
-    }
-})
+router.post('/create', async (req, res) => {
+  const { nombre, descripcion, stock, precio, imagen, categoria } = req.body;
+
+  try {
+    const nuevoProducto = await createProd({
+      nombre,
+      descripcion,
+      stock,
+      precio,
+      imagen,
+      categoria
+    });
+
+    res.status(201).json(nuevoProducto);
+  } catch (error) {
+    console.error('Error al crear producto:', error);
+    res.status(400).json({ mensaje: 'Error al crear producto', error });
+  }
+});
 
 export default router
