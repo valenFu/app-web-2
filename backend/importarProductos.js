@@ -4,7 +4,6 @@ import fs from 'fs';
 import path from 'path';
 import Producto from '../db/schemas/productos.schemas.js';
 
-// Ruta relativa desde backend/importarProductos.js hacia frontend/datos/productos.json
 const rutaJSON = path.join('..', 'frontend', 'datos', 'productos.json');
 
 mongoose.connect(process.env.MONGODB_URI)

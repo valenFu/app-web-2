@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Panel de Administrador</title>
+  <link rel="stylesheet" href="../estilos/style.css" />
+</head>
+<body>
+
+  <nav class="navegacion">
+    <ul></ul>
+  </nav>
+
+  <main class="admin-container">
+    <h1>Subir Nuevo Producto</h1>
+    <form id="productoForm" class="formulario" enctype="multipart/form-data">
+      <label for="categoria">Categoría:</label>
+      <select id="categoria" name="categoria" required>
+        <option value="">Seleccionar</option>
+        <option value="ropa">Ropa</option>
+        <option value="calzado">Calzado</option>
+        <option value="hogar">Hogar</option>
+      </select>
+
+      <label for="nombre">Nombre del producto:</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="descripcion">Descripción:</label>
+      <textarea id="descripcion" name="descripcion" rows="3" required></textarea>
+
+      <label for="precio">Precio:</label>
+      <input type="number" id="precio" name="precio" step="0.01" required />
+
+      <label for="stock">Stock:</label>
+      <input type="number" id="stock" required min="0" step="1" value="0">
+
+      <label for="imagen">Imagen del producto:</label>
+      <input type="file" id="imagen" name="imagen" accept="image/*" required />
+
+      <button type="submit">Guardar Producto</button>
+    </form>
+
+    <div id="mensaje"></div>
+  </main>
+
+  <script src="../paginas/navbar.js"></script>
+  <script src="../script/CrearProd.js"></script>
+</body>
+</html>
+
+

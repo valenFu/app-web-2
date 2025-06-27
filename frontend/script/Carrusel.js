@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => response.json())
         .then(data => {
             // Llamamos a la función para crear el carrusel
-            crearCarrusel(data.productos);
+            crearCarrusel(data);
         })
         .catch(error => {
             console.error("Error al cargar los productos:", error);

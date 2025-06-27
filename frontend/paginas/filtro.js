@@ -1,59 +1,53 @@
-function mostrarProductosPorCategoria(categoria) {
-    const container = document.querySelector('.contenedorItem');
+async function mostrarProductosPorCategoria(categoria) {
+  const container = document.querySelector('.contenedorItem');
+  container.innerHTML = '';
 
-    fetch('../datos/Productos.json') 
-        .then(response => response.json())
-        .then(data => {
-            const products = data.productos;
+  try {
+    // Cambiá esta URL para llamar a tu backend
+    const res = await fetch(`http://localhost:3000/productos/categoria/${categoria}`);
+    if (!res.ok) throw new Error('No se pudo obtener los productos');
+    const products = await res.json();
 
-            // Filtra los productos por categoría
-            const filteredProducts = products.filter(product => product.categoria === categoria);
+    products.forEach(product => {
+      const item = document.createElement('div');
+      item.className = 'item';
 
-            // Limpia el contenedor antes de mostrar los productos filtrados
-            container.innerHTML = '';
+      const image = document.createElement('img');
+      image.src = `http://localhost:3000/uploads/${product.imagen}`;
+      image.alt = product.nombre;
 
-            // Genera las tarjetas para cada producto filtrado
-            filteredProducts.forEach(product => {
-                const item = document.createElement('div');
-                item.className = 'item';
+      const title = document.createElement('h3');
+      title.textContent = product.nombre;
 
-                const image = document.createElement('img');
-                image.src = `../imagenes/${product.imagen}`;  
-                image.alt = product.nombre;
+      const description = document.createElement('p');
+      description.textContent = product.descripcion;
 
-                const title = document.createElement('h3');
-                title.textContent = product.nombre;
+      const price = document.createElement('p');
+      price.textContent = `$${product.precio.toFixed(2)}`;
 
-                const description = document.createElement('p');
-                description.textContent = product.descripcion;
+      const addButton = document.createElement('button');
+      addButton.textContent = 'Añadir al carrito';
+      addButton.onclick = () => console.log(`${product.nombre} añadido al carrito`);
 
-                const price = document.createElement('p');
-                price.textContent = `$${product.precio.toFixed(2)}`;
+      item.appendChild(image);
+      item.appendChild(title);
+      item.appendChild(description);
+      item.appendChild(price);
+      item.appendChild(addButton);
 
-                const addButton = document.createElement('button');
-                addButton.textContent = 'Añadir al carrito';
-                addButton.onclick = () => console.log(`${product.nombre} añadido al carrito`);
-
-                item.appendChild(image);
-                item.appendChild(title);
-                item.appendChild(description);
-                item.appendChild(price);
-                item.appendChild(addButton);
-
-                container.appendChild(item);
-            });
-        })
-        .catch(error => console.error('Error al cargar los productos:', error));
+      container.appendChild(item);
+    });
+  } catch (error) {
+    console.error('Error al cargar los productos:', error);
+  }
 }
 
-// Detecta la categoría al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
-    const contenedor = document.querySelector('.contenedorItem');
-    const categoria = contenedor.getAttribute('data-categoria');
-
-    if (categoria) {
-        mostrarProductosPorCategoria(categoria);
-    } else {
-        console.error('No se encontró una categoría en el atributo data-categoria');
-    }
+  const contenedor = document.querySelector('.contenedorItem');
+  const categoria = contenedor.getAttribute('data-categoria');
+  if (categoria) {
+    mostrarProductosPorCategoria(categoria.toLowerCase());
+  } else {
+    console.error('No se encontró una categoría en el atributo data-categoria');
+  }
 });

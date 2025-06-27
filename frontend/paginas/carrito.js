@@ -5,7 +5,7 @@ function mostrarProductosPorCategoria(categoria) {
     fetch('../datos/Productos.json')
         .then(response => response.json())
         .then(data => {
-            const products = data.productos;
+            const products = data;
 
             // Filtrar los productos por categoría
             const filteredProducts = products.filter(product => product.categoria === categoria);

@@ -15,6 +15,7 @@ app.use(express.json());
 
 app.use('/auth', authRoutes);
 app.use('/productos', productosRoutes);
+app.use('/uploads', express.static('uploads'));
 
 // Conectar a MongoDB antes de iniciar el servidor
 connectToDatabase()

@@ -1,22 +1,23 @@
 import express from 'express';
+import bcrypt from 'bcrypt';
 import Usuario from '../../db/schemas/usuario.schemas.js';
 import jwt from 'jsonwebtoken';
 
 const router = express.Router();
-const SECRET_KEY = process.env.JWT_SECRET || '9A877196C2AD465A241AC8D849549';
+const SECRET_KEY = process.env.JWT_SECRET || 'clave-secreta-por-defecto';
 
-// Ruta para registrar usuario
+// REGISTRO
 router.post('/register', async (req, res) => {
   try {
-    const { nombre, email, contraseña } = req.body;
+    const { nombre, apellido, email, contraseña } = req.body;
 
-    // Verificar si ya existe usuario con ese email
     const existeUsuario = await Usuario.findOne({ email });
     if (existeUsuario) {
       return res.status(400).json({ mensaje: 'El email ya está registrado' });
     }
 
-    const usuario = new Usuario({ nombre, email, contraseña });
+    const hash = await bcrypt.hash(contraseña, 10);
+    const usuario = new Usuario({ nombre, apellido, email, contraseña: hash });
     await usuario.save();
 
     res.status(201).json({ mensaje: 'Usuario creado correctamente' });
@@ -25,7 +26,7 @@ router.post('/register', async (req, res) => {
   }
 });
 
-// Ruta para login
+// LOGIN
 router.post('/login', async (req, res) => {
   try {
     const { email, contraseña } = req.body;
@@ -35,13 +36,11 @@ router.post('/login', async (req, res) => {
       return res.status(400).json({ mensaje: 'Email o contraseña incorrectos' });
     }
 
-    // Comparar contraseña con la guardada
     const esValido = await usuario.compararContraseña(contraseña);
     if (!esValido) {
       return res.status(400).json({ mensaje: 'Email o contraseña incorrectos' });
     }
 
-    // Generar token JWT
     const token = jwt.sign(
       { id: usuario._id, email: usuario.email },
       SECRET_KEY,

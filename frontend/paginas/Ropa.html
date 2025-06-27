@@ -18,12 +18,23 @@
     <main class="contenedorItem" data-categoria="Ropa">
         <!-- Las tarjetas de productos se generan aca -->
     </main>
-    
+
+    <!-- 🔽 Sección de carrito añadida para evitar errores de null -->
+    <section id="seccionCarrito" style="display: none;">
+        <h2>Carrito</h2>
+        <div id="listaCarrito"></div>
+        <p id="carritoTotal">Total: $0.00</p>
+        <button id="botonComprar">Comprar</button>
+    </section>
+    <!-- 🔼 -->
+
     <footer class="footer">
         <p>Derechos reservados © 2024 - Tienda de Ropa Interior</p>
     </footer>
+
     <script src="navbar.js"></script>
     <script src="filtro.js"></script>
     <script src="carrito.js"></script>
+    <script src="mostrarProductos.js"></script>
 </body>
 </html>
