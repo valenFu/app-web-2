@@ -1,0 +1,198 @@
+[{
+  "_id": {
+    "$oid": "685c09670858c9bf26fda2d1"
+  },
+  "nombre": "Pijama corto de acetato",
+  "categoria": "Ropa",
+  "descripcion": "Pijama corto color rojo.",
+  "precio": 15.99,
+  "imagen": "pijamaAcetato (1).webp",
+  "stock": 50,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-06-25T14:36:23.465Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-25T14:36:23.465Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685c09670858c9bf26fda2d2"
+  },
+  "nombre": "Trio de morley",
+  "categoria": "Ropa",
+  "descripcion": "Combo de pijama tanto para dias frios como calurosos.",
+  "precio": 25.99,
+  "imagen": "pijamaAcetato (2).webp",
+  "stock": 30,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-06-25T14:36:23.467Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-25T14:36:23.467Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685c09670858c9bf26fda2d3"
+  },
+  "nombre": "Pijama Curvy",
+  "categoria": "Ropa",
+  "descripcion": "Pijama de algodon.",
+  "precio": 45,
+  "imagen": "pijamaCurvy.webp",
+  "stock": 20,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-06-25T14:36:23.468Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-25T14:36:23.468Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685c09670858c9bf26fda2d4"
+  },
+  "nombre": "Pijama modal",
+  "categoria": "Ropa",
+  "descripcion": "Pijama modal con pantalon largo.",
+  "precio": 29.99,
+  "imagen": "PijamaModal (1).webp",
+  "stock": 40,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-06-25T14:36:23.468Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-25T14:36:23.468Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685c09670858c9bf26fda2d5"
+  },
+  "nombre": "Pijama modal",
+  "categoria": "Ropa",
+  "descripcion": "Pijama kids con bolsa animada.",
+  "precio": 70,
+  "imagen": "PijamaModal (2).webp",
+  "stock": 10,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-06-25T14:36:23.468Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-25T14:36:23.468Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685c09670858c9bf26fda2d6"
+  },
+  "nombre": "Pantuflas de river",
+  "categoria": "Calzado",
+  "descripcion": "Pantuflas de river para el mas fanatico.",
+  "precio": 70,
+  "imagen": "Pantuflas de river.webp",
+  "stock": 15,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-06-25T14:36:23.468Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-25T14:36:23.468Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685c09670858c9bf26fda2d7"
+  },
+  "nombre": "Pantuflas rosas de conejo",
+  "categoria": "Calzado",
+  "descripcion": "Pantuflas rosas para niñas con diseño de conejos.",
+  "precio": 70,
+  "imagen": "pantuflas rosas de conejo.webp",
+  "stock": 6,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-06-25T14:36:23.468Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-25T14:36:23.468Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685c09670858c9bf26fda2d8"
+  },
+  "nombre": "Pantuflas acolchadas",
+  "categoria": "Calzado",
+  "descripcion": "pantuflas acolchadas para los inviernos mas frios.",
+  "precio": 70,
+  "imagen": "pantuflas acolchadas.webp",
+  "stock": 18,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-06-25T14:36:23.468Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-25T14:36:23.468Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685c09670858c9bf26fda2d9"
+  },
+  "nombre": "Colcha de Marie",
+  "categoria": "Hogar",
+  "descripcion": "Colcha de niños con diseño de Marie para 1 plaza.",
+  "precio": 30,
+  "imagen": "Colcha de Marie.webp",
+  "stock": 6,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-06-25T14:36:23.468Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-25T14:36:23.468Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685c09670858c9bf26fda2da"
+  },
+  "nombre": "Colcha de Stich",
+  "categoria": "Hogar",
+  "descripcion": "Colcha de niños con diseño de Stich para 1 plaza.",
+  "precio": 20,
+  "imagen": "Colcha de Stich.webp",
+  "stock": 14,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-06-25T14:36:23.468Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-25T14:36:23.468Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685eb6ba267dd39237480564"
+  },
+  "nombre": "medias",
+  "categoria": "calzado",
+  "descripcion": "Medias naranjas",
+  "precio": 12,
+  "imagen": "1751037626627-medias.webp",
+  "stock": 15,
+  "createdAt": {
+    "$date": "2025-06-27T15:20:26.634Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-27T15:20:26.634Z"
+  },
+  "__v": 0
+}]
