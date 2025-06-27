@@ -1,62 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
 body {
-    font-family: 'Fredoka', sans-serif;
+    font-family: "Fredoka", sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(250, 227, 195);
     margin: 0;
-    padding: 0;
-    background-color: #f9dbb3;
+    padding-top: 40; /* 👉 este valor lo sube */
+    min-height: 100vh;
 }
 
 .container {
-    max-width: 320px; /* más angosto */
-    margin: 60px auto;
-    background-color: #fce6c9;
-    padding: 25px;
-    border-radius: 15px;
-    border: 4px solid #6d0c2e;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
-/* Logo */
 .container img {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     margin-bottom: 10px;
 }
 
-/* Títulos */
-.container h1, .container h2 {
-    margin-bottom: 20px;
-    color: #6d0c2e;
-    font-size: 22px;
+.registro-form {
+    background-color: rgb(238, 220, 198);
+    color: rgb(99, 10, 41);
+    border: 3px solid rgb(99, 10, 41);
+    border-radius: 10px;
+    padding: 15px;
+    width: 270px;
 }
 
-/* Inputs */
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="date"] {
-    width: 92%;
-    padding: 8px;
-    margin: 6px 0;
-    border: 2px solid #6d0c2e;
-    border-radius: 6px;
+.registro-form h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.registro-form label {
+    display: block;
     font-size: 13px;
-    box-sizing: border-box;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0 4px;
 }
 
-/* Botón */
-button[type="submit"] {
-    background-color: #6d0c2e;
+.registro-form input[type="text"],
+.registro-form input[type="email"],
+.registro-form input[type="password"],
+.registro-form input[type="date"] {
+    width: 80%;
+    padding: 5px;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.registro-form button {
+    width: 85%;
+    padding: 10px;
+    margin-top: 12px;
+    background-color: rgb(99, 10, 41);
     color: white;
     border: none;
-    padding: 10px 16px;
-    margin-top: 15px;
-    font-size: 14px;
-    border-radius: 8px;
+    border-radius: 5px;
+    font-size: 13px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-button[type="submit"]:hover {
-    background-color: #8c1b43;
+.registro-form button:hover {
+    background-color: #7a0e27;
 }
+
+
